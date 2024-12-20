@@ -24,9 +24,12 @@ header {
     z z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: basline;
 }
 
-header a{
+header a {
     text-decoration: none;
     color: inherit;
 
@@ -38,25 +41,52 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
-    }
+}
 
-#menu{
+#menu {
     letter-spacing: 4px;
     font-size: 110%;
     list-style-type: none;
-    }
-#menu > li{
+}
+
+#menu>li {
     margin-bottom: 1em;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #3a3a3a;
+}
+
+/* navbar styles with drop down tool */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    padding: 0 1rem;
+    display: none;
+    top:100%;
+}
+
+/* nav toggle*/
+#nav-toggle:checked~nav {
+display:block;
+}
+
+#nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    font-size: 2rem;
 }
 
 /* main content */
 main {
     background-color: lightblue;
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 /* footer */
