@@ -25,7 +25,7 @@ h3 {
     color: #252525;
 }
 
-.hidden-heading{
+.hidden-heading {
     display: none;
 }
 
@@ -167,7 +167,7 @@ hr {
 }
 
 /*meet up times section*/
-#times{
+#times {
     background: url(../images/dublin-city.webp) no-repeat center/cover;
     /*handles responsitivity without the need for a media querry*/
     display: flex;
@@ -185,9 +185,19 @@ hr {
     border: 2px solid white;
 }
 
-#times h3{
+#times h3 {
     /*override the heading color set in general styles*/
     color: #fafafa;
+}
+
+/* gallery page*/
+#photos img {
+    width: 100%;
+    line-height: 1em;
+}
+
+#photos {
+    line-height: 0;
 }
 
 /* footer */
@@ -205,7 +215,13 @@ hr {
     color: #3a3a3a;
 }
 
-
+/* media querry: large or landscape photos (576px and up ) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
 
 /* media querry: tablets and larger (760px and up ) */
 @media screen and (min-width: 760px) {
@@ -267,37 +283,48 @@ hr {
 
     }
 
-    @media screen and (min-width; 992px) {
-        #menu a:hover {
-            border-bottom: 1px solid #3a3a3a;
-        }
+    #photos {
+        column-count: 3;
+        column-gap: 0;
+    }
+}
+
+@media screen and (min-width; 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
     }
 
-    @media screen and (min-width: 1200px) {
-
-        /* reasons section*/
-        #benefits {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #benefits>div {
-            flex: 1;
-        }
-
-        #benefits-image {
-            order: 0;
-        }
-
-        #benefits-mental {
-            order: 1;
-        }
-
-        #benefits-mental>div {
-            align-self: flex-start;
-        }
-
-        #benefits-physical>div {
-            align-self: flex-end;
-        }
+    #photos {
+        column-count: 4;
+        column-gap: 0;
     }
+}
+
+@media screen and (min-width: 1200px) {
+
+    /* reasons section*/
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
+    }
+}
